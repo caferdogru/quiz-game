@@ -50,7 +50,6 @@ export class QuestionComponent implements OnInit {
     this.activeQuestionIndex += 1;
     this.activeQuestion = this.questions[this.activeQuestionIndex + 1];
     if (this.activeQuestionIndex === this.questions.length - 1) {
-      console.log(this.questions);
       this.router.navigate(["/quiz-result"], {queryParams: { questions: this.questions}});
     }
 
