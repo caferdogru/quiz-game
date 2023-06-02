@@ -1,0 +1,13 @@
+
+
+  <div class="container">
+    <h2>Select a Category to Play</h2>
+    <div class="category-container">
+      <button class="category" *ngFor="let category of categories" [routerLink]="['/questions/category/', category.id]">
+        <span class="category-name">
+          {{category.name}}
+        </span>
+      </button>
+    </div>
+  </div>
+  <!-- <ngx-spinner size="medium"></ngx-spinner> -->

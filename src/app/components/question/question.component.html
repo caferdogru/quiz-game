@@ -1,0 +1,16 @@
+<div *ngIf="activeQuestion" class="question-container">
+  <div class="point">
+    {{ totalPoints }}
+  </div>
+  <div class="timer">
+    {{ timer }}
+  </div>
+  <div class="question-text">
+    <span>Q{{activeQuestionIndex+1}}. </span>{{ activeQuestion.question}}
+  </div>
+  <div class="answer-container">
+    <button (click)="changeQuestion($event)" class="answer" *ngFor="let answer of activeQuestion.all_answers">
+      {{ answer }}
+    </button>
+  </div>
+</div>
