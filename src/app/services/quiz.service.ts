@@ -15,6 +15,7 @@ export class QuizService {
   }
 
   baseRoute: string = 'https://opentdb.com/';
+  userAnswers: Question[];
 
 
   getCategories() {

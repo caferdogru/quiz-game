@@ -1,0 +1,15 @@
+
+
+<div *ngIf="activeQuestion" class="question-container">
+  <button (click)="previousQuestion()" class="previous question">&#8249;</button>
+  <button (click)="nextQuestion()" class="next question">&#8250;</button>
+  <div class="question-text">
+    <span>Q{{activeQuestionIndex+1}}. </span>{{ activeQuestion.question}}
+  </div>
+  <div class="answer-container">
+    <button class="answer" *ngFor="let answer of activeQuestion.all_answers"
+     [ngClass]="decideButtonClass(answer)">
+      {{ answer }}
+    </button>
+  </div>
+</div>
