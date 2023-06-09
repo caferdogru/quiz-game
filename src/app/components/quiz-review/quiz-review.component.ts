@@ -27,16 +27,11 @@ export class QuizReviewComponent implements OnInit {
   previousQuestion(): void {
     this.activeQuestionIndex = this.activeQuestionIndex !== 0 ? this.activeQuestionIndex-1 : this.questions.length-1;
     this.activeQuestion = this.questions[this.activeQuestionIndex];
-    console.log(this.activeQuestionIndex);
   }
 
   nextQuestion(): void {
-    console.log(this.questions.length);
     this.activeQuestionIndex = this.activeQuestionIndex < this.questions.length - 1 ? this.activeQuestionIndex+1 : 0;
     this.activeQuestion = this.questions[this.activeQuestionIndex];
-    console.log(this.activeQuestionIndex);
-
-
   }
 
   decideButtonClass(answer: string){

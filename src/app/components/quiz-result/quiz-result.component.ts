@@ -26,7 +26,7 @@ export class QuizResultComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    console.log(this.quizService.userAnswers);
+
   }
 
   ngAfterViewInit(): void {

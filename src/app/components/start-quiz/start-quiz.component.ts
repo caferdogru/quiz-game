@@ -27,9 +27,7 @@ export class StartQuizComponent implements OnInit {
 
 
   getCategoryQuestions(category:Category) {
-    console.log(category);
     this.quizService.getQuestions(category.id, 10).subscribe(res => {
-      console.log(res);
     })
   }
 
